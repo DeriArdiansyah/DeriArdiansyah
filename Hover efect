@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover Effect</title>
+
+</head>
+
+<style>
+body {
+
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to  right,  gold 49%,black 1%,#222 50%);
+}
+button{
+  position:absolute;
+  border:2px solid rgba(255, 255, 255, 0.4);
+  padding:30px 50px;
+  color:black;
+  text-transform:uppercase;
+  overflow:hidden;
+  outline:none;
+  font-size:15px;
+  font-weight:bolder;
+  border-radius:3px;
+  background: rgba(255, 255, 255, 0.4);
+  
+}
+button::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(255, 255, 255, 0.2);
+}
+button::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left:-50%;
+  width:100%;
+  height:100%;
+  background: linear-gradient(
+    100deg,
+    transparent,rgba(255, 255, 255, 0.5)
+  );
+  transition: 1s;
+
+}
+button:hover::after,before{
+  left:100%;
+}
+
+
+footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.4);
+  padding:20px;
+  text-align: center;
+  font-family:monospace;
+}
+.footer a{
+  padding:5px 5px;
+  text-decoration:none;
+  font-size: 25px;
+  font-weight:bold;
+  color:  #fff;
+  animation:anim 3.2s linear infinite ;
+}
+@keyframes anim{
+    0%{
+        border-top:3px solid #fff;
+    }
+    25%{
+        border-left:3px solid #fff;
+    }
+    50%{
+        border-bottom:3px solid #fff;
+    }
+    75%{
+        border-right:3px solid #fff;
+    }
+}
+
+</style>
+<body>
+<button>KLIK TOMBOL DIBAWAH</button>
+ <footer class="footer">
+        <a href=" https://www.instagram.com/invites/contact/?i=jdg954eby3sv&utm_content=5er2uze">PENCET NGAB</a>
+    </footer>
+</body>
+</html>
